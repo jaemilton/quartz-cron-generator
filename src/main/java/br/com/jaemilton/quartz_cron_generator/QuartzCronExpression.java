@@ -175,6 +175,10 @@ public class QuartzCronExpression {
     /// </summary>
     /// <param name="secondsInteval">Interval in seconds</param>
     /// <returns></returns>
+    /**
+     * @param secondsInteval
+     * @return
+     */
     public static QuartzCronExpression everyNSeconds(int secondsInteval)
     {
         return new QuartzCronExpression(secondsInteval, CronExpressionType.EVERY_N_SECONDS);
@@ -185,6 +189,10 @@ public class QuartzCronExpression {
     /// </summary>
     /// <param name="minutesInteval">Interval in minutes</param>
     /// <returns>New CronExpression instance</returns>
+    /**
+     * @param minutesInteval
+     * @return
+     */
     public static QuartzCronExpression everyNMinutes(int minutesInteval)
     {
         return new QuartzCronExpression(minutesInteval, CronExpressionType.EVERY_N_MINUTES);
@@ -195,6 +203,10 @@ public class QuartzCronExpression {
     /// </summary>
     /// <param name="hoursInterval">Interval in hours</param>
     /// <returns>New CronExpression instance</returns>
+    /**
+     * @param hoursInterval
+     * @return
+     */
     public static QuartzCronExpression everyNHours(int hoursInterval)
     {
         return new QuartzCronExpression(hoursInterval, CronExpressionType.EVERY_N_HOURS);
@@ -206,6 +218,11 @@ public class QuartzCronExpression {
     /// <param name="hour">Hour, when occurence will happen</param>
     /// <param name="minute">Minute, when occurence will happen</param>
     /// <returns>New CronExpression instance</returns>
+    /**
+     * @param hour
+     * @param minute
+     * @return
+     */
     public static QuartzCronExpression everyDayAt(int hour, int minute)
     {
         return new QuartzCronExpression(1, hour, minute, CronExpressionType.EVERY_DAY_AT);
@@ -218,6 +235,12 @@ public class QuartzCronExpression {
     /// <param name="hour">Hour, when occurence will happen</param>
     /// <param name="minute">Minute, when occurence will happen</param>
     /// <returns>New CronExpression instance</returns>
+    /**
+     * @param daysInterval
+     * @param hour
+     * @param minute
+     * @return
+     */
     public static QuartzCronExpression everyNDaysAt(int daysInterval, int hour, int minute)
     {
         return new QuartzCronExpression(daysInterval, hour, minute, CronExpressionType.EVERY_N_DAYS_AT);
@@ -229,6 +252,11 @@ public class QuartzCronExpression {
     /// <param name="hour">Hour, when occurence will happen</param>
     /// <param name="minute">Minute, when occurence will happen</param>
     /// <returns>New CronExpression instance</returns>
+    /**
+     * @param hour
+     * @param minute
+     * @return
+     */
     public static QuartzCronExpression everyWeekDayAt(int hour, int minute)
     {
         return new QuartzCronExpression(hour, minute, CronExpressionType.EVERY_WEEK_DAY);
@@ -241,6 +269,12 @@ public class QuartzCronExpression {
     /// <param name="minute">Minute, when occurence will happen</param>
     /// <param name="days">Days, when occurence will happen</param>
     /// <returns>New CronExpression instance</returns>
+    /**
+     * @param hour
+     * @param minute
+     * @param daysOfWeek
+     * @return
+     */
     public static QuartzCronExpression everySpecificWeekDayAt(int hour, int minute, Set<DaysOfWeek> daysOfWeek)
     {
         return new QuartzCronExpression(daysOfWeek, hour, minute, CronExpressionType.EVERY_SPECIFIC_WEEK_DAY_AT);
@@ -255,6 +289,15 @@ public class QuartzCronExpression {
     /// <param name="hour">Hour, when occurence will happen</param>
     /// <param name="minute">Minute, when occurence will happen</param>
     /// <returns>New CronExpression instance</returns>
+    
+    
+    /**
+     * @param dayNumber
+     * @param monthInterval
+     * @param hour
+     * @param minute
+     * @return
+     */
     public static QuartzCronExpression everySpecificDayEveryNMonthAt(int dayNumber, int monthInterval, int hour, int minute)
     {
         return new QuartzCronExpression(dayNumber, monthInterval, hour, minute, CronExpressionType.EVERY_SPECIFIC_DAY_EVERY_N_MONTH_AT);
@@ -271,6 +314,15 @@ public class QuartzCronExpression {
     /// <param name="hour">Hour, when occurence will happen</param>
     /// <param name="minute">Minute, when occurence will happen</param>
     /// <returns>New CronExpression instance</returns>
+    
+    /**
+     * @param daySeqNumber
+     * @param dayOfWeek
+     * @param monthInverval
+     * @param hour
+     * @param minute
+     * @return
+     */
     public static QuartzCronExpression everySpecificSeqWeekDayEveryNMonthAt(DaySeqNumber daySeqNumber, DaysOfWeek dayOfWeek, int monthInverval, int hour, int minute)
     {
         return new QuartzCronExpression(daySeqNumber, dayOfWeek, monthInverval, hour, minute, CronExpressionType.EVERY_SPECIFIC_SEQ_WEEK_DAY_EVERY_N_MONTH_AT);
@@ -285,6 +337,15 @@ public class QuartzCronExpression {
     /// <param name="hour">Hour, when occurence will happen</param>
     /// <param name="minute">Minute, when occurence will happen</param>
     /// <returns>New CronExpression instance</returns>
+    
+    
+    /**
+     * @param months
+     * @param dayNumber
+     * @param hour
+     * @param minute
+     * @return
+     */
     public static QuartzCronExpression everySpecificDayOfMonthAt(Set<Months> months, int dayNumber, int hour, int minute)
     {
         return new QuartzCronExpression(months, dayNumber, hour, minute, CronExpressionType.EVERY_SPECIFIC_DAY_OF_MONTH_AT);
@@ -301,6 +362,15 @@ public class QuartzCronExpression {
     /// <param name="hour">Hour, when occurence will happen</param>
     /// <param name="minute">Minute, when occurence will happen</param>
     /// <returns>New CronExpression instance</returns>
+    
+    /**
+     * @param daySeqNumber
+     * @param dayOfWeek
+     * @param month
+     * @param hour
+     * @param minute
+     * @return
+     */
     public static QuartzCronExpression everySpecificSeqWeekDayOfMonthAt(DaySeqNumber daySeqNumber, DaysOfWeek dayOfWeek, Set<Months> month, int hour, int minute)
     {
         return new QuartzCronExpression(daySeqNumber, dayOfWeek, month, hour, minute, CronExpressionType.EVERY_SPECIFIC_SEQ_WEEKDAY_OF_MONTH_AT);
@@ -315,6 +385,10 @@ public class QuartzCronExpression {
     /// <returns>New CronExpression instance</returns>
 
     
+    /**
+     * @param dateTime
+     * @return
+     */
     public static QuartzCronExpression specificDateAt(LocalDateTime dateTime)
     {
         return new QuartzCronExpression(
