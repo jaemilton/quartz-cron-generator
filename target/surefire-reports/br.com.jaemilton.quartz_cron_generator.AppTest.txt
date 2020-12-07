@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: br.com.jaemilton.quartz_cron_generator.AppTest
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 4, Errors: 1, Skipped: 0, Time elapsed: 1.532 s <<< FAILURE! - in br.com.jaemilton.quartz_cron_generator.AppTest
+testMothsRepresentation(br.com.jaemilton.quartz_cron_generator.AppTest)  Time elapsed: 0.002 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[DEC,JUL]> but was:<[JUL,DEC]>
+	at br.com.jaemilton.quartz_cron_generator.AppTest.testMothsRepresentation(AppTest.java:134)
+
+testEverySpecificWeekDayAt(br.com.jaemilton.quartz_cron_generator.AppTest)  Time elapsed: 0 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<0 22 22 ? * S[AT,SUN] *> but was:<0 22 22 ? * S[UN,SAT] *>
+	at br.com.jaemilton.quartz_cron_generator.AppTest.testEverySpecificWeekDayAt(AppTest.java:103)
+
+TestEverySpecificDayOfMonthAt(br.com.jaemilton.quartz_cron_generator.AppTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException
+	at br.com.jaemilton.quartz_cron_generator.AppTest.TestEverySpecificDayOfMonthAt(AppTest.java:185)
+
+testDaysOfWeekRepresentation(br.com.jaemilton.quartz_cron_generator.AppTest)  Time elapsed: 0 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<S[AT,SUN]> but was:<S[UN,SAT]>
+	at br.com.jaemilton.quartz_cron_generator.AppTest.testDaysOfWeekRepresentation(AppTest.java:119)
+
+TestEverySpecificSeqWeekDayOfMonthAt(br.com.jaemilton.quartz_cron_generator.AppTest)  Time elapsed: 0 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<0 0 12 ? JAN [MON]#1 *> but was:<0 0 12 ? JAN [2]#1 *>
+	at br.com.jaemilton.quartz_cron_generator.AppTest.TestEverySpecificSeqWeekDayOfMonthAt(AppTest.java:175)
+
